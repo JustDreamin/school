@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Safety - Distracted Driving</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; line-height: 1.8; }
+        header { background: #4A90E2; color: white; padding: 30px; text-align: center; }
+        nav { background: #7EB6F7; color: white; padding: 12px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px; transition: background 0.3s; }
+        nav a:hover { background: #4A90E2; }
+        
+        /* Mobile Menu */
+        .menu { display: none; }
+        .menu-icon { display: none; cursor: pointer; }
+        
+        /* Main Content */
+        main { padding: 30px; max-width: 900px; margin: auto; background: white; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1); }
+        section { margin-bottom: 40px; }
+        .stats { background: #e8f0fe; padding: 18px; margin: 20px 0; border-left: 6px solid #4A90E2; }
+        footer { background: #4A90E2; color: white; text-align: center; padding: 12px; margin-top: 25px; }
+        img { height: auto; border-radius: 10px; margin-top: 20px; }
+        #image-a, #image-c { max-width: 70%; display: block; margin-left: auto; margin-right: auto; }
+        #image-b { max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; }
+        p { margin-bottom: 20px; }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav a { display: block; margin: 10px 0; padding: 10px; }
+            .menu { display: block; }
+            .menu-icon { display: block; }
+            .menu a { text-align: center; }
+            main { padding: 15px; }
+            img { max-width: 100%; margin-top: 20px; }
+            #image-a, #image-c { max-width: 100%; }
+        }
+        
+        /* Responsive Hamburger Menu */
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            .menu-icon {
+                display: block;
+                font-size: 30px;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+            }
+            .menu.open { display: block; }
+        }
+        
+        /* Text Scaling for Smaller Screens */
+        @media (max-width: 480px) {
+            body { font-size: 14px; }
+            header { padding: 20px; }
+            footer { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Road Safety - Distracted Driving</h1>
+    </header>
+    <nav>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <div class="menu">
+            <a href="#problem">The Problem</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#statistics">Statistics</a>
+            <a href="#survey">Survey</a>
+        </div>
+    </nav>
+    <main>
+        <section id="problem">
+            <h2>Why is Being Distracted by a Cellphone in Traffic a Problem?</h2>
+            <p>Being distracted by your cellphone increases the risk of having an accident in traffic, especially when distracted for long periods. Using a cellphone while driving reduces your physical, visual, and mental attention to the road. Whether it's texting, calling, or even selecting a song, each distraction increases the chances of accidents.</p>
+            <img src="a.jpg" alt="Distracted Driver Using Phone" id="image-a">
+            <p>According to research, 47% of a control group of 750 car drivers have used their cellphone at least once while driving. Of these, 12% have held their phones, and 35% used hands-free setups. Despite this, 96% of the drivers supported a nationwide ban on cellphone use while driving.</p>
+        </section>
+        <section id="solutions" class="stats">
+            <h2>How is the Issue Already Being Addressed?</h2>
+            <p>The issue of distracted driving is being tackled through legal measures and awareness campaigns. The Dutch government has implemented rules that allow cellphone use only through hands-free setups or when the vehicle is stationary. Additionally, cameras are being installed to detect cellphone use while driving. Violations carry hefty fines, such as:</p>
+            <ul>
+                <li>€430 for car and motorbike drivers</li>
+                <li>€170 for cyclists</li>
+                <li>€300 for moped riders</li>
+            </ul>
+            <p>Awareness campaigns focus on educating the public through advertisements and promoting apps or settings that help limit distractions, such as auto-reply functions for messages or turning off notifications while driving.</p>
+            <img src="b.jpeg" alt="Awareness Campaign" id="image-b">
+        </section>
+        <section id="statistics">
+            <h2>Who is Most Often Involved in These Accidents?</h2>
+            <p>Using a cellphone while driving increases the risk of accidents by up to 8 times compared to driving without distractions. In 2024, 45% of surveyed drivers admitted to using their phone while in traffic. Among them:</p>
+            <ul>
+                <li>60% reported calling while driving</li>
+                <li>47% reported texting</li>
+                <li>Almost 40% reported using apps</li>
+            </ul>
+            <p>The group most at risk for accidents includes drivers aged 20 to 29, followed by teenagers aged 16 to 17. Interestingly, women tend to use their phones more often than men while driving, but men are more likely to be involved in accidents. Despite this, women tend to experience more severe accidents.</p>
+            <img src="c.jpg" alt="At Risk Drivers" id="image-c">
+        </section>
+        <section id="survey" class="stats">
+            <h2>Survey Results</h2>
+            <p>Our survey data reveals that:</p>
+            <ul>
+                <li>Many respondents believe using phones while driving is dangerous.</li>
+                <li>Common distractions include notifications, calls, and messaging.</li>
+                <li>Some drivers have been stopped by the police for phone use.</li>
+                <li>Most respondents feel stricter regulations and awareness campaigns could help reduce phone-related accidents.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Road Safety Awareness | Stay Safe. Drive Responsibly.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector(".menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
